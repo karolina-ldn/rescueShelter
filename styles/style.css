@@ -1,0 +1,70 @@
+#title{
+    font-family: The Historia Demo;
+    font-size: 5rem;
+    padding: 15px;
+    font-family: 'The Historia Demo' , sans-serif;
+    background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    user-select: none;
+}
+
+html{
+    font-family: sans-serif;
+}
+
+.contact{
+    background-color: #221e3f;
+    border-radius: 25px;
+    padding: 2rem;
+    
+}
+
+form{
+    width: 70%;
+    margin: 0 auto;
+}
+
+form label{
+    font-size: 1.5rem;
+}
+
+input,
+select,
+textarea{
+    padding: 1rem;
+    margin-bottom: 5px;
+    border: none;
+    outline-color: #92FE9D;
+}
+
+input[type="Submit"]{
+    width: initial;
+    background-color: #92FE9D;
+    color: #221e3f;
+    padding: 1rem 2rem;
+    border-radius: .8rem;
+    cursor: pointer;
+    transition: background-color 650ms;
+}
+
+input[type="Submit"]:hover{
+    color: #000000;
+    background: #e8e5ee;
+}
+
+.pictures{
+    position: absolute;
+    left: 40rem;
+    top: 50rem;
+}
+
+.gif{
+    height: 10rem;
+    left: 60vh;
+    margin-top: 1rem;
+}
+
+.title-image{
+    display: flex;
+}
