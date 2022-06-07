@@ -25,7 +25,7 @@
       <div class="container">
           <form action="/action_page.php" method="post">
               <label for="name">Name:</label>
-              <input type="text" id="name" name="name" placeholder="Enter your dog's name..." required>
+              <input type="text" id="name" name="name" placeholder="Enter your dog's name..." >
 
               <p>What is your dog's gender?</p>
                 <input type="radio" id="male" name="dog_gender" value="male">
@@ -34,7 +34,7 @@
                 <label for="female">Female</label><br>
 
               <p>What is your dog's age?</p>
-                <input type="number">
+                <input type="number" id="age" min="0">
 
               <p>Choose your breed</p>
                 <select name="breed" id="breed">
@@ -59,15 +59,17 @@
                 <label for="checkbox">Litter trained</label><br>
 
               <p>What is your dog's weight?</p>
-                <input type="number">
+                <input type="number" min="1" id="weight">
 
               <p>CALENDER</p>
                 <input type="date"><br>
                 <br>
-                <img class="pictures"" src="/images/dog2.png" alt="">
-                <input type="Submit" value="Submit">
+                <img class="pictures" src="/images/dog2.png" alt="">
+                <!-- <input type="Submit" value="Submit"> -->
 
           </form>
+          <button onClick="addDog()">Submit</button>
+        
       </div>
   </section>
 
