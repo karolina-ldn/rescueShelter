@@ -1,5 +1,5 @@
 let randomNumber = Math.floor(Math.random()*4)+1;
-document.querySelector(".pictures").setAttribute("src","/dog"+randomNumber+".png");
+document.querySelector(".pictures").setAttribute("src","dog"+randomNumber+".png");
 
 let dogs = [];
 loadDogs();
@@ -37,7 +37,7 @@ function addDog () {
     localStorage.setItem("dogs",JSON.stringify(dogs))
 }
 
-function renderDog (dog) {
+function renderDog (dog,i) {
     let box = document.createElement("div")
     document.body.appendChild(box)
     box.className = "box"
