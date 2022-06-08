@@ -27,6 +27,8 @@ function addDog () {
     dog.age = document.getElementById("age").value
     dog.breed = document.getElementById("breed").value
     dog.neutered = document.getElementById("neutered").checked
+    dog.chipped = document.getElementById("chipped").checked
+    dog.vaccinated = document.getElementById("vaccinated").checked
     dog.weight = document.getElementById("weight").value
     dogs.push(dog)
 
@@ -60,9 +62,35 @@ function renderDog (dog) {
     box.appendChild(neutered)
     neutered.innerText = dog.neutered ? "neutered" : "not neutered"
 
+    let chipped = document.createElement("p")
+    box.appendChild(chipped)
+    chipped.innerText = dog.chipped ? "chipped" : "not chipped"
+
+    let vaccinated = document.createElement("p")
+    box.appendChild(vaccinated)
+    vaccinated.innerText = dog.vaccinated ? "vaccinated" : "not vaccinated"
+
+
     let weight = document.createElement("p")
     box.appendChild(weight)
     weight.innerText = "weight: "+dog.weight+" kilograms"
 
+    let deleteButton = document.createElement("button")
+    deleteButton.innerText = "Delete position"
+    box.appendChild(deleteButton)
 
+    deleteButton.addEventListener("click",deleteDog)
+    deleteButton.dataset.index = i
+
+}
+
+function deleteDog (e){
+    let button = e.target
+    let i = button.dataset.index
+
+    dogs.splice(i,1)
+
+    renderDogs()
+
+    localStorage.setItem("dogs", JSON.stringify(dogs))
 }
