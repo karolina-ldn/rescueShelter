@@ -15,6 +15,7 @@ function loadDogs (){
 }
 
 function renderDogs (){
+    document.getElementById("dogs").innerHTML = ""
     for (let i=0;i<dogs.length;i++){
         renderDog(dogs[i])
     }
@@ -39,7 +40,7 @@ function addDog () {
 
 function renderDog (dog,i) {
     let box = document.createElement("div")
-    document.body.appendChild(box)
+    document.getElementById("dogs").appendChild(box)
     box.className = "box"
 
     let heading = document.createElement("h2")
